@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>typescript</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>
+    Service Log:
+  </h2>
+    <ion-list>
+      <form (ngSubmit)="registerActivity()">
+        <ion-item>
+            <ion-input placeholder="Event (In - Out)" clearInput [(ngModel)]="eventValue"name="eventField"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="SO" clearInput [(ngModel)]="soValue"name="soField"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="TT" clearInput [(ngModel)]="ttValue"name="ttFields"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Station" clearInput [(ngModel)]="Value"name="Field"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="User" clearInput [(ngModel)]="technicalValue"name="technicalField"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-textarea placeholder="observations" [(ngModel)]="observationsValue"name="observationsField"></ion-textarea>
+        </ion-item>
+        <button ion-button full type="submit" block>Register activity</button>
+      </form>
+    </ion-list>
+  <ion-card>
+       <ion-card-header>
+           Respuesta:
+       </ion-card-header>
+       <ion-card-content>
+         <b>{{answer}}</b>
+       </ion-card-content>
+   </ion-card>
+</ion-content>
